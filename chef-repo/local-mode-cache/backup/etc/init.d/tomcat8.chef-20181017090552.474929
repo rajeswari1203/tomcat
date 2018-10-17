@@ -1,0 +1,12 @@
+#!/bin/sh
+export JAVA_OPTS=-Xmx128M
+case "$1" in
+start)
+  /var/tomcat8/bin/startup.sh
+;;
+stop)
+  /var/tomcat8/bin/shutdown.sh
+;;
+*)
+  echo "Syntax: $0 <start|stop>"
+esac
